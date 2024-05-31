@@ -97,7 +97,6 @@ table{
   --max-width: 1600px;
   --header-font: "Rubik", sans-serif;
 }
-
 * {
   padding: 0;
   margin: 0;
@@ -158,12 +157,13 @@ nav {
 }
 
 .nav__menu__btn {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--white);
   cursor: pointer;
 }
 
 .nav__links {
+  font-size: 1.25rem;
   position: absolute;
   top: 64px;
   left: 0;
@@ -174,7 +174,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
   background-color: var(--text-dark);
   transition: 0.5s;
   z-index: -1;
@@ -211,10 +211,16 @@ button{
   transition:transform 80ms ease-in;
   display: inline-block;
 } 
+button:hover {
+  background-color: #0056b3;
+}
+button:active{
+  transform: scale(0.95);
+}
 
 .header__container {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .header__image img {
@@ -228,14 +234,14 @@ button{
 
 .header__content h2 {
   margin-bottom: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
 .header__content h1 {
   margin-bottom: 1rem;
-  font-size: 4.25rem;
+  font-size: 4.8rem;
   font-weight: 600;
   font-family: var(--header-font);
   line-height: 5rem;
@@ -243,10 +249,10 @@ button{
 }
 
 .header__content p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.75rem;
+  line-height: 2rem;
   color: var(--text-light);
 }
 
@@ -350,8 +356,186 @@ button{
   .header__content {
     text-align: left;
   }
-
   .header__btns {
     justify-content: flex-start;
+  }
+}
+/* .box-text-cont{
+  height: 25vh;
+} */
+.box-text-cont h1{
+  text-align: center;
+  font-size: 10vh;
+  font-weight: 600;
+  font-family: var(--header-font);
+  line-height: 1em;
+  color: var(--text-dark);
+}
+.box-text-cont p{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: var(--header-font);
+  line-height: 1em;
+  color: var(--text-light);
+}
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 10em;
+  height: 18em;
+  align-items: center;
+}
+.box {
+  align-items: center;
+  height: 90%;
+  flex: 1;
+  margin: 10px;
+  padding: 25px;
+  max-width: 300px;
+  /* background-color: #007bff; */
+  color: var(--text-dark);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+
+.box:hover {
+  transform: scale(1.05);
+}
+.box-icon{
+  height: 45%;
+  width: 100%;
+
+  /* background-color: #13313c; */
+  
+}
+
+.box-icon img {
+  width: 100px;
+  height: 100px;
+  margin: 0 8vh;
+}
+.box-txt{
+  height: 55%;
+  width: 100%;
+  font-family: var(--header-font);
+  font-size: 1.2em;
+  margin: 15px 0;
+  /* background-color: #13313c; */
+}
+@media (width < 768px) {
+  .box-container {
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .box {
+      max-width:none;
+      width: 100%;
+      width: 30vh;
+  }
+  .box-icon{
+    height: 45%;
+    width: 100%;
+  }
+  
+  .box-icon img {
+    width: 50px;
+    height: 50px;
+    margin: 0 8vh;
+  }
+  .box-txt{
+    height: 55%;
+    width: 100%;
+    margin: 2px;
+  }
+  
+}
+
+.aboutUs{
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 14em;
+  justify-content: space-around;
+}
+.img-container{
+  flex: 1;
+  min-width: 300px;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.content-container {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  min-width: 300px;
+}
+
+.content-container h1 {
+  font-size:5em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.content-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.content-container p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+@media (max-width < 768px) {
+  .aboutUs {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .image-container, .content-container {
+      min-width: 100%;
+  }
+
+  .statistics {
+      flex-direction: column;
+  }
+
+  .stat {
+      margin-bottom: 20px;
   }
 }
