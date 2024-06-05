@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/animations.css">  
     <link rel="stylesheet" href="css/main.css">  
-    <link rel="stylesheet" href="css/signup1.css">
+    <link rel="stylesheet" href="css/signup.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>
@@ -57,22 +57,22 @@ if($_POST){
 
 <div class="container">
         <div class="forms-container">
-          <div class="signin-signup">
+          <div class="signup">
             <form action="#" method="POST" class="sign-up-form">
               
               <h2 class="title">Sign up</h2>
               <div class="input-field">
                 <i class="ri-user-3-fill"></i>
-                <input type="text" name="fname" placeholder="First rname" />
+                <input type="text" name="fname" placeholder="First rname" required />
               </div>
               <div class="input-field">
                 <i class="ri-user-3-fill"></i>
-                <input type="text" name="lname" placeholder="Second name" />
+                <input type="text" name="lname" placeholder="Second name" required />
               </div>
         
               <div class="input-field">
                 <i class="ri-home-4-fill"></i>
-                <input type="text" name="address" placeholder="Address" />
+                <input type="text" name="address" placeholder="Address" required />
               </div>
               
               <div class="input-field">
