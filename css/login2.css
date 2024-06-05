@@ -17,13 +17,14 @@ input {
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
+  transition: transform 0.9s ease-in-out;
 }
 button{
   border-radius: 2em;
   border: 1px solid #FFF;
   background: #21a9d3;
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 1em 2em;
   text-transform: uppercase;
@@ -54,7 +55,7 @@ button:focus{
   left: 0;
 }
 
-.signin-signup {
+.signin{
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -76,12 +77,6 @@ form {
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-}
-
-
-form.sign-up-form {
-  opacity: 0;
-  z-index: 1;
 }
 
 form.sign-in-form {
@@ -201,65 +196,20 @@ form.sign-in-form {
   font-size: 0.8rem;
   border-radius: 2em;
 }
-
-.right-panel .image,
-.right-panel .content {
-  transform: translateX(800px);
-}
-
-/* ANIMATION */
-
-.container.sign-up-mode:before {
-  transform: translate(100%, -50%);
-  right: 52%;
-}
-
-.container.sign-up-mode .left-panel .image,
-.container.sign-up-mode .left-panel .content {
-  transform: translateX(-800px);
-}
-
-.container.sign-up-mode .signin-signup {
-  left: 25%;
-}
-
-.container.sign-up-mode form.sign-up-form {
-  opacity: 1;
-  z-index: 2;
-}
-
-.container.sign-up-mode form.sign-in-form {
-  opacity: 0;
-  z-index: 1;
-}
-
-.container.sign-up-mode .right-panel .image,
-.container.sign-up-mode .right-panel .content {
-  transform: translateX(0%);
-}
-
-.container.sign-up-mode .left-panel {
-  pointer-events: none;
-}
-
-.container.sign-up-mode .right-panel {
-  pointer-events: all;
-}
-
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
     height: 100vh;
   }
-  .signin-signup {
+  .signin {
     width: 100%;
-    top: 95%;
+    top: 75%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
 
-  .signin-signup,
-  .container.sign-up-mode .signin-signup {
+  .signin,
+  .container.signin {
     left: 50%;
   }
 
@@ -321,34 +271,7 @@ form.sign-in-form {
     top: initial;
     transition: 2s ease-in-out;
   }
-
-  .container.sign-up-mode:before {
-    transform: translate(-50%, 100%);
-    bottom: 32%;
-    right: initial;
-  }
-
-  .container.sign-up-mode .left-panel .image,
-  .container.sign-up-mode .left-panel .content {
-    transform: translateY(-300px);
-  }
-
-  .container.sign-up-mode .right-panel .image,
-  .container.sign-up-mode .right-panel .content {
-    transform: translateY(0px);
-  }
-
-  .right-panel .image,
-  .right-panel .content {
-    transform: translateY(300px);
-  }
-
-  .container.sign-up-mode .signin-signup {
-    top: 5%;
-    transform: translate(-50%, 0);
-  }
 }
-
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
