@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/animations.css">  
     <link rel="stylesheet" href="css/main.css">  
-    <link rel="stylesheet" href="css/login2.css">
+    <link rel="stylesheet" href="css/login1.css">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-        
+      crossorigin="anonymous"></script> 
     <title>Login</title>
-
 </head>
 <body>
     <?php
@@ -36,16 +33,13 @@
     //import database
     include("connection.php");
 
-    
-
-
 
     if($_POST){
 
         $email=$_POST['useremail'];
         $password=$_POST['userpassword'];
         
-        $error='<label for="promter" class="form-label"></label>';
+        $error='<div for="promter" class="input-field"></div>';
 
         $result= $database->query("select * from webuser where email='$email'");
         if($result->num_rows==1){
@@ -61,7 +55,7 @@
                     header('location: patient/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                  $error='<div for="promter" class="input-field" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</div>';
                 }
 
             }elseif($utype=='a'){
@@ -76,7 +70,7 @@
                     header('location: admin/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                    $error='<div for="promter" class="input-field" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</div>';
                 }
 
 
@@ -91,24 +85,24 @@
                     header('location: doctor/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                    $error='<div for="promter" class="input-field" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</div>';
                 }
 
             }
             
         }else{
-            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</label>';
+            $error='<div for="promter" class="input-field" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</div>';
         }
 
     }else{
-        $error='<label for="promter" class="form-label">&nbsp;</label>';
+        $error='<div for="promter" class="input-field">&nbsp;</div>';
     }
 
     ?>
     
     <div class="container">
       <div class="forms-container">
-        <div class="signin-signup">
+        <div class="signin">
           <form action="#" method="POST" class="sign-in-form">
             <h2 class="title">Welcome Back</h2>
 
@@ -132,11 +126,13 @@
               />
             </div>
 
+            
             <div class="btn-inline">
               <button type="reset" value="Reset" name="sub">Reset</button>
               <button type="submit" value="Login">Log In</button>
             </div>
           </form>
+          <!-- <?php echo $error; ?> -->
         </div>
       </div>
 
@@ -159,10 +155,8 @@
           </div>
           <img src="img/log.svg" class="image" alt="#" />
         </div>
-
       </div>
     </div>
-         
 
 </body>
 </html>
