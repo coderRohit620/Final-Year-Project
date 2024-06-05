@@ -12,21 +12,25 @@
     <link rel="stylesheet" href="css/main.css"> 
     <link rel="stylesheet" href="js/main.js">
     <link rel="stylesheet" href="css/index.css">
-    <title>eDoc</title>
+    <title>Dr.OnCall</title>
     <style>
         table{
             animation: transitionIn-Y-bottom 0.5s;
+        }
+        body,html{
+          scroll-behavior: smooth;
         }
     </style>
         
 </head>
 <body>
     <div class="container">
-    <nav>
+      <!-- navigation bar -->
+      <nav>
         <div class="nav__header">
           <div class="nav__logo">
             <a href="#"
-              >pl<span><i class="ri-play-fill"></i></span>y</a
+              >Dr.<span><i class="ri-donut-chart-fill"></i></span>nCall</a
             >
           </div>
           <div class="nav__menu__btn" id="menu-btn">
@@ -45,6 +49,7 @@
           </a>
         </div>
       </nav>
+      <!-- header Content -->
       <header class="section__container header__container">
         <div class="header__image">
           <img src="img/bg14.png" alt="header" />
@@ -70,6 +75,7 @@
           </div>
         </div>
       </header>
+      <!-- how its work section -->
       <div>
         <div class="box-text-cont" id="How">
             <h1>How It's Works!</h1>
@@ -83,7 +89,7 @@
             </div>
             <div class="box-txt">
               <h3>Create A account</h3>
-                  <p>First create your account after that Sign In</p>
+                  <p>Don't have Account ,First create your account after that Sign In</p>
             </div>
 
           </div>
@@ -117,35 +123,69 @@
           </div>
         </div>
       </div>
-
-      <section class="aboutUs" id="About">
-        <div class="img-container">
-          <img src="img/docimg.png" alt="">
-        </div>
-        <div class="content-container">
-            <h1>About Us</h1>
-            <h2>Healing Starts Here: Your Journey, Our Commitment.</h2>
-            <p>Welcome to a healthcare experience designed around you. Our platform simplifies the path to wellness, connecting you seamlessly with expert care. Your health, our priority.</p>
-          <div class="statistics">
-              <div class="stat">
-                <h2>2000+</h2>
-                <p>Satisfied Patients</p>
-              </div>
-              <div class="stat">
-                <h2>50+</h2>
-                <p>Specialized Medical Services</p>
-              </div>
-            </div>
-            <a href="login.php">
-              <button>Book An Appointment</button>
-            </a>
-
-          </div>
-        
-      </section>
-    </div>
-
     
+      <!-- About Us Section -->
+      <div>
+        <section class="aboutUs" id="About">
+          <div class="img-container">
+            <img src="img/docimg.png" alt="">
+          </div>
+          <div class="content-container">
+              <h1>About Us</h1>
+              <h2>Healing Starts Here: Your Journey, Our Commitment.</h2>
+              <p>Welcome to a healthcare experience designed around you. Our platform simplifies the path to wellness, connecting you seamlessly with expert care. Your health, our priority.</p>
+            <div class="statistics">
+                <div class="stat">
+                  <h2>2000+</h2>
+                  <p>Satisfied Patients</p>
+                </div>
+                <div class="stat">
+                  <h2>50+</h2>
+                  <p>Specialized Medical Services</p>
+                </div>
+              </div>
+              <a href="login.php">
+                <button>Book An Appointment</button>
+              </a>
+
+            </div>
+          
+        </section>
+      </div>
+      <!-- contact Us section -->
+      <div>
+        <div class="contact-Us" id="Contact">
+          <h1>Get in Touch</h1>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <div class="foot-contact-section">
+              <div class="foot-contact-box">
+                  <div class="foot-icon"><i class="ri-mail-line"></i></div>
+                  <h2>CHART TO US</h2>
+                  <p>Our friendly team is here to help.</p>
+                  <a href="mailto:hi@ourcompany.com">hi@ourcompany.com</a>
+              </div>
+              <div class="foot-contact-box">
+                  <div class="foot-icon"><i class="ri-map-pin-line"></i></div>
+                  <h2>OFFICE</h2>
+                  <p>Come say hello at our office HQ.</p>
+                  <address>
+                      121 Rock Street, 21 Avenue,<br>
+                      New York, NY 92103-9000
+                  </address>
+              </div>
+              <div class="foot-contact-box">
+                  <div class="foot-icon"><i class="ri-phone-line"></i></div>
+                  <h2>PHONE</h2>
+                  <p>Mon-Fri from 8am to 5am</p>
+                  <a href="tel:+1555000000">+1(555) 000-000</a>
+              </div>
+          </div>
+        </div>
+        <div class="footer-end">
+            <p>Copyright 2022 Our Company. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
 
   
       <script src="https://unpkg.com/scrollreveal"></script>
